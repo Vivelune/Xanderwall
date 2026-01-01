@@ -9,10 +9,10 @@ const adapter = new PrismaPg({
   connectionString: process.env.DATABASE_URL,
 })
 
-const prisma = globalForPrisma.prisma || new PrismaClient({
+const prismaClient= globalForPrisma.prisma || new PrismaClient({
   adapter,
 })
 
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prismaClient
 
-export default prisma
+export default prismaClient
