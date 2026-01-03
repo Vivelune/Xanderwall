@@ -1,5 +1,5 @@
 "use client"
-import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { sidebarData } from '@/lib/data'
 import { UserButton } from '@clerk/nextjs'
 import { MenuIcon } from 'lucide-react'
@@ -40,6 +40,11 @@ const Sidebar = (props: Props) => {
                         className={`w-4 h-4 ${pathname.includes(item.link) ? "": "opacity-80"}`}/>
                         </Link>
                     </TooltipTrigger>
+                    <TooltipContent side='right'>
+                        <span className='text-sm '>
+                            {item.title}
+                        </span>
+                    </TooltipContent>
                 </Tooltip>
 
             </TooltipProvider>
