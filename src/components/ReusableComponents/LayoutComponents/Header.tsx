@@ -6,6 +6,7 @@ import { ArrowLeftIcon, CloudLightningIcon } from 'lucide-react'
 import { usePathname, useRouter } from 'next/navigation'
 import React from 'react'
 import PurpleIcon from '../PurpleIcon'
+import CreateWebinarButton from '../CreateWebinarButton'
 
 type Props = {user : User}
 
@@ -43,6 +44,10 @@ const Header = ({user}: Props) => {
         <PurpleIcon>
           <CloudLightningIcon/>
         </PurpleIcon>
+
+        {/* TODO : Add stripe subscription and create a webinar button */}
+        {/* user subscription */}
+        <CreateWebinarButton/>
     </div>
 
 
